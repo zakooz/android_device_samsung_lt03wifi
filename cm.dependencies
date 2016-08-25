@@ -9,7 +9,7 @@
         "remote": "github",
         "repository": "exynos5420/proprietary_vendor_samsung",
         "revision": "cm-13.0",
-        "target_path": "vendor/samsung/lt03wifi"
+        "target_path": "vendor/samsung"
     },
     {
         "remote": "github",
