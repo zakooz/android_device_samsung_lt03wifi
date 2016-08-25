@@ -263,6 +263,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
     ro.sys.fw.dex2oat_thread_count=4
 
 # HWUI CACHES
