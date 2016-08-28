@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
     init.universal5420.rc \
     init.universal5420.usb.rc \
     init.universal5420.wifi.rc \
-    ueventd.universal5420.rc
+    init.universal5420.power.rc \
+    ueventd.universal5420.rc 
 
 # Radio
 PRODUCT_PACKAGES += \

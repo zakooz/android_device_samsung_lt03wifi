@@ -1,0 +1,5 @@
+on post-fs-data
+    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 650000:60000 800000:20000"
+    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load "99"
+    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq "650000"
+    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "90 650000:73 800000:80 900000:81 1000000:75 1200000:77 1400000:84 1600000:84"
