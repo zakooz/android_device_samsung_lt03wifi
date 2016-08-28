@@ -452,6 +452,7 @@ on fs
     chown system system /sys/class/timed_output/vibrator/pwm_default
     chmod 0644 /sys/class/timed_output/vibrator/pwm_threshold
     chown system system /sys/class/timed_output/vibrator/pwm_threshold
+    write /sys/class/timed_output/vibrator/pwm_value 50
 
 on property:ro.fuse_sdcard=true
     start sdcard
@@ -579,5 +580,3 @@ service swapon /sbin/sswap -s
     group root
     oneshot
 
-on property:init.svc.bootanim=stopped
-    start camera_id
