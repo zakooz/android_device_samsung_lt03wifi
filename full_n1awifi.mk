@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-
 # Inherit from n1awifi device
 $(call inherit-product, device/samsung/n1awifi/device.mk)
 
