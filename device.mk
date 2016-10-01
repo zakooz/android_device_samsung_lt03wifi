@@ -179,7 +179,10 @@ PRODUCT_PACKAGES += \
 # Radio
 PRODUCT_PACKAGES += \
     libsecril-client \
-    libsecril-client-sap
+    libsecril-client-sap \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += telephony-ext
 
 # ANT+
 PRODUCT_PACKAGES += \
