@@ -183,6 +183,9 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 #TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5420
 
+# SurfaceFlinger
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+
 # Webkit
 ENABLE_WEBGL := true
 
