@@ -83,7 +83,8 @@ PRODUCT_PACKAGES += \
     Gello
 
 PRODUCT_PACKAGES += \
-    libdmitry
+    libdmitry \
+    libshims_wvm
 
 # Remove packages that do not work well
 PRODUCT_PACKAGES += \
