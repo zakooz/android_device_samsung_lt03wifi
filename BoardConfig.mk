@@ -41,7 +41,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 #HAX: real block size is too small to build a ROM
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
+# BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 10485760
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2524971008
 # 12863930368 - 16384 <encryption footer>
@@ -53,6 +53,14 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # SELinux
 BOARD_SEPOLICY_DIRS += device/samsung/n1awifi/sepolicy
 BOARD_SEPOLICY_DIRS += device/samsung/exynos5420-common/sepolicy
+
+# TWRP Support - Optional
+ifeq ($(WITH_TWRP),true)
+-include device/samsung/n1awifi/twrp.mk
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
+TARGET_KERNEL_CONFIG := recovery_lt03_defconfig
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
+endif
 
 # Inherit from exynos5420-common
 include device/samsung/exynos5420-common/BoardConfigCommon.mk
