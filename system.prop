@@ -4,6 +4,9 @@
 
 # Radio
 ro.radio.noril=yes
+ro.carrier=unknown
 
 # UI
 ro.sf.lcd_density=320
+
+ro.assert.device=n1awifi
