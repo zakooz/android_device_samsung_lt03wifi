@@ -55,10 +55,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
-# Gello (CM browser)
-PRODUCT_PACKAGES += \
-    Gello
-
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.universal5420 \
@@ -87,8 +83,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_small_cache_height=1024 \
     ro.hwui.text_large_cache_width=2048 \
     ro.hwui.text_large_cache_height=1024
-
-$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/n1awifi/n1awifi-vendor.mk)
